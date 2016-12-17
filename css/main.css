@@ -66,4 +66,31 @@ p {
     margin-left: 10px;
 }
 
+h1 {
+	font-family: Lobster;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
 
+.text-center{text-align: center;}
+.rectangle{
+  width: 100px;
+  height: 100px;
+
+  border: 1px solid;
+}
+
+.redRec{background-color: #FF0000;}
+.blueRec{background-color: #0000FF;}
+.aquaRec{background-color: #00FFFF;}
+.azureRec{background-color: #F0FFFF;}
+.blueVioletRec{background-color: #8A2BE2;}
+.darkOrangeRec{background-color: 	#FF8C00;}
+.blackRec{background-color: #000000;}
+.pinkRec{background-color: #FF1493;}
+.fireBrickRec{background-color: #B22222;}
+.greenRec{background-color: #006400;}
+.greyRec{background-color: #A9A9A9;}
