@@ -66,6 +66,7 @@ p {
     margin-left: 10px;
 }
 
+/* color guessing game */
 h1 {
 	font-family: Lobster;
 	font-size: 24px;
@@ -98,11 +99,11 @@ h1 {
 
 
 /*Matching Game Style*/
-    
+
 #leftSide img {
         position: absolute;
     }
-    
+
     #rightSide {
         float: right;
         border-left: 1px solid black;
@@ -110,7 +111,7 @@ h1 {
         height: 500px;
         /*position: absolute;*/
     }
-    
+
     #leftSide {
         float: left;
         width: 50%;
@@ -118,3 +119,10 @@ h1 {
         position: absolute;
     }
 
+/*tic tac toe*/
+.rectangleXO {
+  border: 1px solid;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+}
