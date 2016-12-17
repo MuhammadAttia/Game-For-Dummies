@@ -39,7 +39,11 @@
           node.appendChild(elem);
           var elem1 = document.createElement("h1");
           elem1.setAttribute("class", "text-center");
-          var msg = document.createTextNode("congratulations you find it in " +trys + " trys");
+          if(trys == 1) {
+            msg = document.createTextNode("congratulations you find it in " +trys + " try");
+          } else {
+            msg = document.createTextNode("congratulations you find it in " +trys + " trys");
+          }
           elem1.appendChild(msg);
           document.getElementById("congratsmsg").appendChild(elem1);
         } else{
@@ -83,8 +87,8 @@
     <div class="container">
         <div class="row white" id = "main">
           <div class="col-xs-12">
-          <h1 class = "text-primary"> Hey my freind i will chosse a color for the folowing colors and
-            you have to guess it by click on it.</h1><hr><br>
+          <h1 class = "text-primary"> Hey my freind i will choose a color from the
+             following colors and you have to guess it by click on it.</h1><hr><br>
           </div>
           <div class = "col-xs-1">
             <div class="rectangle redRec" id="redRectangle"
