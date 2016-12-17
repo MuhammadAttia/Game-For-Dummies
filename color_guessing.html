@@ -12,15 +12,17 @@
     <!-- Main -->
     <link href="css/main.css" rel="stylesheet">
     <!-- lobster font -->
-    <link href = "css/lobster.css" rel="stylesheet"/>
+    <link href="css/lobster.css" rel="stylesheet" />
     <script>
-      var colors = ["redRectangle", "blueRectangle", "blueViolettangle",
-      "pinkRectangle", "blackRectangle", "aquaRectangle", "azureRectangle",
-      "darkOrangetangle", "greenRectangle", "fireRectangle", "greyRectangle"];
-      var randomIndex = Math.floor((Math.random() * 11));
-      var target = colors[randomIndex];
-      var trys = 0;
-      function play(id) {
+    var colors = ["redRectangle", "blueRectangle", "blueViolettangle",
+        "pinkRectangle", "blackRectangle", "aquaRectangle", "azureRectangle",
+        "darkOrangetangle", "greenRectangle", "fireRectangle", "greyRectangle"
+    ];
+    var randomIndex = Math.floor((Math.random() * 11));
+    var target = colors[randomIndex];
+    var trys = 0;
+
+    function play(id) {
         node = document.getElementById(id);
         trys += 1;
         var countString = trys.toString();
@@ -28,33 +30,33 @@
         var parent = document.getElementById("counts");
         parent.removeChild(parent.firstChild);
         parent.appendChild(count);
-        if(target == id) {
-          for (var index = 0; index < 11; index += 1) {
-            document.getElementById(colors[index]).removeAttribute("onclick");
-          }
-          var elem = document.createElement("img");
-          elem.setAttribute("src", "images/right.png");
-          elem.setAttribute("alt", "right");
-          elem.setAttribute("class", "img-responsive");
-          node.appendChild(elem);
-          var elem1 = document.createElement("h1");
-          elem1.setAttribute("class", "text-center");
-          if(trys == 1) {
-            msg = document.createTextNode("congratulations you find it in " +trys + " try");
-          } else {
-            msg = document.createTextNode("congratulations you find it in " +trys + " tries");
-          }
-          elem1.appendChild(msg);
-          document.getElementById("congratsmsg").appendChild(elem1);
-        } else{
-          node.removeAttribute("onclick");
-          var elem = document.createElement("img");
-          elem.setAttribute("src", "images/wrong.png");
-          elem.setAttribute("alt", "Wrong");
-          elem.setAttribute("class", "img-responsive");
-          node.appendChild(elem);
+        if (target == id) {
+            for (var index = 0; index < 11; index += 1) {
+                document.getElementById(colors[index]).removeAttribute("onclick");
+            }
+            var elem = document.createElement("img");
+            elem.setAttribute("src", "images/right.png");
+            elem.setAttribute("alt", "right");
+            elem.setAttribute("class", "img-responsive");
+            node.appendChild(elem);
+            var elem1 = document.createElement("h1");
+            elem1.setAttribute("class", "text-center");
+            if (trys == 1) {
+                msg = document.createTextNode("congratulations you find it in " + trys + " try");
+            } else {
+                msg = document.createTextNode("congratulations you find it in " + trys + " tries");
+            }
+            elem1.appendChild(msg);
+            document.getElementById("congratsmsg").appendChild(elem1);
+        } else {
+            node.removeAttribute("onclick");
+            var elem = document.createElement("img");
+            elem.setAttribute("src", "images/wrong.png");
+            elem.setAttribute("alt", "Wrong");
+            elem.setAttribute("class", "img-responsive");
+            node.appendChild(elem);
         }
-      }
+    }
     </script>
 </head>
 
@@ -73,75 +75,65 @@
                 </div>
             </div>
             <div id="logo">
-              <p><big>G</big><small>ames <big>f</big>or <big>D</big>ummies </small></p>
-                </div>
+                <p><big>G</big><small>ames <big>f</big>or <big>D</big>ummies </small></p>
+            </div>
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="matching.html">Matching </a></li>
-                <li><a href="image_filter.html">Image Filter </a></li>
                 <li class="active"><a href="color_guessing.html">Color Guessing</a></li>
-                <li ><a href="tic_tac.html">Tic Tac</a></li>
+                <li><a href="tic_tac.html">Tic Tac Toe</a></li>
             </ul>
         </div>
     </nav>
     <div class="container">
-        <div class="row white" id = "main">
-          <div class="col-xs-12">
-          <h1 class = "text-primary"> Hey my freind i will choose a color from the
-             following colors and you have to guess it by click on it.</h1><hr><br>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle redRec" id="redRectangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1" >
-            <div class="rectangle blueRec" id="blueRectangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle blueVioletRec" id="blueViolettangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle pinkRec" id="pinkRectangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle blackRec" id="blackRectangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle aquaRec" id="aquaRectangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle azureRec" id="azureRectangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle darkOrangeRec" id="darkOrangetangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle greenRec" id="greenRectangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle fireBrickRec" id="fireRectangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-1">
-            <div class="rectangle greyRec" id="greyRectangle"
-            onclick="play(this.id)"></div>
-          </div>
-          <div class = "col-xs-12">
-            <h1>counts: <span id = "counts"> 0 </span></h1>
-          </div>
-          <div class = "col-xs-12" id = "congratsmsg">
-          </div>
-          <div class="col-xs-2 col-xs-offset-5">
-            <button type="button" class="btn btn-primary" onclick="location.reload()">Reset Game</button>
-          </div>
+        <div class="row white" id="main">
+            <div class="col-xs-12">
+                <h1 class="text-primary"> Hey my freind i will choose a color from the
+             following colors and you have to guess it by click on it.</h1>
+                <hr>
+                <br>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle redRec" id="redRectangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle blueRec" id="blueRectangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle blueVioletRec" id="blueViolettangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle pinkRec" id="pinkRectangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle blackRec" id="blackRectangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle aquaRec" id="aquaRectangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle azureRec" id="azureRectangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle darkOrangeRec" id="darkOrangetangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle greenRec" id="greenRectangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle fireBrickRec" id="fireRectangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-1">
+                <div class="rectangle greyRec" id="greyRectangle" onclick="play(this.id)"></div>
+            </div>
+            <div class="col-xs-12">
+                <h1>counts: <span id = "counts"> 0 </span></h1>
+            </div>
+            <div class="col-xs-12" id="congratsmsg">
+            </div>
+            <div class="col-xs-2 col-xs-offset-5">
+                <button type="button" class="btn btn-primary" onclick="location.reload()">Reset Game</button>
+            </div>
         </div>
         <div class="row footer">
             Games for Dummies &copy 2016

@@ -28,14 +28,13 @@
                 </div>
             </div>
             <div id="logo">
-                <p><big>G</big><small>ames <big>F</big>or <big>D</big>ummies </small></p>
+                <p><big>G</big><small>ames <big>f</big>or <big>D</big>ummies </small></p>
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="matching.html">Matching </a></li>
-                <li><a href="image_filter.html">Image Filter </a></li>
                 <li><a href="color_guessing.html">Color Guessing</a></li>
-                <li><a href="tic_tac.html">Tic Tac</a></li>
+                <li><a href="tic_tac.html">Tic Tac Toe</a></li>
             </ul>
         </div>
     </nav>
@@ -46,20 +45,17 @@
             <button type="button" onclick="location.reload()" style="float: left;">Reset Game</button>
             <br>
             <div id="level"></div>
-
-            <div ><h3> Your Level : <span id="score">1</span></h3> </div>
-
-
-                <div id="rightSide"></div>
-                <div id="leftSide"> </div>
-            
+            <div>
+                <h3> Your Level : <span id="score">1</span></h3> </div>
+            <div id="rightSide"></div>
+            <div id="leftSide"> </div>
         </div>
         <script>
         var numberOfFaces = 5;
         var theLeftSide = document.getElementById("leftSide");
         var theRightSide = document.getElementById("rightSide");
         var theBody = document.getElementsByTagName("body")[0];
-        var level=1;
+        var level = 1;
         var score = 1;
 
 
