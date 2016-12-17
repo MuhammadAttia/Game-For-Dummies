@@ -126,3 +126,13 @@ h1 {
   height: 100px;
   background-color: grey;
 }
+
+/*home */
+figure {
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
