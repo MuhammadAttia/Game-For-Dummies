@@ -42,20 +42,27 @@
     <div class="container">
         <div class="row white">
             <h2> Matching Game</h2>
-            <br>
+            <p>Click on the extra smiling face on the left.</p>
             <button type="button" onclick="location.reload()" style="float: left;">Reset Game</button>
             <br>
-            <br>
-            <p> <b>Instruction </b>: Click on the extra smiling face on the left move to next level of Game. </p>
+            <div id="level"></div>
+
+            <div ><h3> Your Level : <span id="score">1</span></h3> </div>
+
+
+                <div id="rightSide"></div>
+                <div id="leftSide"> </div>
             
-            <div id="rightSide"></div>
-            <div id="leftSide"> </div>
         </div>
         <script>
         var numberOfFaces = 5;
         var theLeftSide = document.getElementById("leftSide");
         var theRightSide = document.getElementById("rightSide");
         var theBody = document.getElementsByTagName("body")[0];
+        var level=1;
+        var score = 1;
+
+
 
         function generateFaces() {
             while (theLeftSide.firstChild) {
@@ -82,16 +89,25 @@
                 event.stopPropagation();
                 numberOfFaces += 5;
                 generateFaces();
+                level++;
+                score += 1;
+                var scoreString = document.createTextNode(score.toString());
+                var parent = document.getElementById("score");
+                parent.removeChild(parent.firstChild);
+                parent.appendChild(scoreString);
+
             }
         }
         generateFaces();
 
 
         theLeftSide.onclick = function gameOver() {
-            alert("Game Over!");
             theLeftSide.onclick = null;
             theLeftSide.lastChild.onclick = null;
+            document.getElementById("level").innerHTML = "<h4 style='color:red'><b>Game Over!!<br>Try next time.</b></h4>";
+
         }
+        </script>
         </script>
         <div class="row footer">
             Games for Dummies &copy 2016
