@@ -94,3 +94,27 @@ h1 {
 .fireBrickRec{background-color: #B22222;}
 .greenRec{background-color: #006400;}
 .greyRec{background-color: #A9A9A9;}
+
+
+
+/*Matching Game Style*/
+    
+#leftSide img {
+        position: absolute;
+    }
+    
+    #rightSide {
+        float: right;
+        border-left: 1px solid black;
+        width: 50%;
+        height: 500px;
+        /*position: absolute;*/
+    }
+    
+    #leftSide {
+        float: left;
+        width: 50%;
+        height: 500px;
+        position: absolute;
+    }
+
